@@ -11,28 +11,35 @@ const Section = () => {
   const viewpointsRef = useRef(null);
 
   useEffect(() => {
-    // SVGアイコン回転（軽量なZ軸回転）
+    const isMobile = window.innerWidth <= 768;
 
-    // viewpoint 全体アニメーション
-    gsap.fromTo(
-      viewpointsRef.current,
-      { opacity: 0, x: -10, y: 10 },
-      {
-        opacity: 1,
-        x: 0,
-        y: 0,
-        duration: 0.9,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: viewpointsRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        },
+    if (isMobile) {
+      // スマホ：アニメーションなしで即時表示
+      if (viewpointsRef.current) {
+        viewpointsRef.current.style.opacity = 1;
+        viewpointsRef.current.style.transform = 'none';
       }
-    );
+    } else {
+      // PC：GSAPアニメーション適用
+      gsap.fromTo(
+        viewpointsRef.current,
+        { opacity: 0, x: -10, y: 10 },
+        {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          duration: 0.9,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: viewpointsRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
 
-    // iOS描画最適化
-    ScrollTrigger.refresh();
+      ScrollTrigger.refresh(); // iOS描画対策
+    }
   }, []);
 
   return (

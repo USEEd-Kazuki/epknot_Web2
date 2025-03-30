@@ -10,44 +10,59 @@ const MainMessage = () => {
   const messageLinesRef = useRef([]);
 
   useEffect(() => {
-    // Catch-Copy animation
-    gsap.fromTo(
-      catchCopyRef.current,
-      { opacity: 0, x: -20 }, // 軽めに調整
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: catchCopyRef.current,
-          start: 'top 90%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
+    const isMobile = window.innerWidth <= 768;
 
-    // Message lines animation
-    gsap.fromTo(
-      messageLinesRef.current,
-      { opacity: 0, x: -5, y: 5 }, // 軽めに調整
-      {
-        opacity: 1,
-        x: 0,
-        y: 0,
-        duration: 0.9,
-        ease: 'power2.out',
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: messageLinesRef.current[0],
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        },
+    if (isMobile) {
+      // スマホでは即時表示
+      if (catchCopyRef.current) {
+        catchCopyRef.current.style.opacity = 1;
+        catchCopyRef.current.style.transform = 'none';
       }
-    );
 
-    // iOS描画対策
-    ScrollTrigger.refresh();
+      messageLinesRef.current.forEach((el) => {
+        if (el) {
+          el.style.opacity = 1;
+          el.style.transform = 'none';
+        }
+      });
+    } else {
+      // PCではアニメーションを適用
+      gsap.fromTo(
+        catchCopyRef.current,
+        { opacity: 0, x: -20 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: catchCopyRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        messageLinesRef.current,
+        { opacity: 0, x: -5, y: 5 },
+        {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          duration: 0.9,
+          ease: 'power2.out',
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: messageLinesRef.current[0],
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
+      ScrollTrigger.refresh(); // iOS描画対策
+    }
   }, []);
 
   return (
