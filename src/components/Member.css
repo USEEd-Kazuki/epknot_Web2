@@ -1,0 +1,210 @@
+/* メンバーセクションの基本設定 */
+.member-section {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  color: #fff;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.team-title {
+  color: #000000;
+  font-size: 2.8rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.team-description {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.member-list {
+  margin-top: 5rem;
+}
+
+/* メンバーカードのスタイル */
+.member-card {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto 5rem;
+  padding: 20px;
+  border-radius: 15px;
+  background: #111216;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.member-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.member-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* バイオリストのスタイル */
+.bio-list {
+  list-style-type: none;
+  text-align: left;
+  color: #ffffff;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.bio-list li {
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+/* メンバーカードの説明文 */
+.member-card p {
+  margin: 20px 0;
+  text-align: left;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0 20px;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+/* Show More と Hide テキスト */
+.show-more-text,
+.hide-text {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 矢印のスタイルとアニメーション */
+.arrow {
+  font-size: 1.5rem;
+  animation: arrow-bounce 2s infinite;
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Show More の矢印は下に表示 */
+.show-more-text .arrow {
+  margin-top: 5px;
+}
+
+/* Hide の矢印は上に表示 */
+.hide-text .arrow {
+  margin-bottom: 5px;
+}
+
+/* More Members セクションのスタイル */
+.more-members {
+  display: none;
+}
+
+/* レスポンシブ対応（スマホ） */
+@media (max-width: 768px) {
+  .member-card {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px; /* 丸みを維持 */
+  }
+
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .team-description {
+    font-size: 1rem;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .member-card h2 {
+    font-size: 1.5rem;
+    word-break: break-word;
+  }
+
+  .member-card h3 {
+    font-size: 1rem;
+    word-break: break-word;
+  }
+
+  .bio-list {
+    font-size: 0.9rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  .bio-list li {
+    margin-bottom: 3px;
+    word-break: break-word;
+  }
+
+  .member-card p {
+    font-size: 0.9rem;
+    padding: 10px;
+    box-sizing: border-box;
+    word-break: break-word;
+  }
+}
+
+/* レスポンシブ対応（タブレット） */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .member-card {
+    max-width: 80%;
+    padding: 20px;
+  }
+
+  .member-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .member-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* アニメーション効果 */
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+}

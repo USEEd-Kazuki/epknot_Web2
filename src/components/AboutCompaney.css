@@ -1,0 +1,110 @@
+.company-info {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #111216;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+.company-description{
+  padding-top: 5rem;
+}
+
+
+.company-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.company-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 10px;
+}
+
+.company-info p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.company-details{
+  margin-top: 5rem;
+}
+.company-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.company-details li {
+  margin-bottom: 15px;
+}
+
+.alinece_content {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 5vw, 80px)
+}
+
+.greig {
+  flex-shrink: 0;
+}
+
+.greig img {
+  width: 150px;
+  height: auto;
+}
+
+.alinece_content p {
+  flex: 1;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .company-info {
+    padding: 30px;
+  }
+
+  .company-info h1 {
+    font-size: 2rem;
+  }
+
+  .company-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .company-info p {
+    font-size: 1.1rem;
+  }
+
+  .alinece_content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .greig img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-info {
+    padding: 20px;
+  }
+
+  .company-info h1 {
+    font-size: 1.7rem;
+  }
+
+  .company-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .company-info p {
+    font-size: 1rem;
+  }
+
+  .greig{
+    width: 250px;
+  }
+}

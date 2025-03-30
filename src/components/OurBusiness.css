@@ -1,0 +1,183 @@
+/* コンテナ全体の設定 */
+.OurBusiness-container {
+  display: flex;
+  height: auto; /* 必要なら高さを調整 */
+  width: 90%;
+  margin: 0 auto;
+  flex-direction: row; /* 横並び */
+}
+
+/* 左側タイトルの設定 */
+.OurBusiness-left-title {
+  position: sticky;
+  top: 0;
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  height: 100%;
+}
+
+.OurBusiness-left-title h1 {
+  line-height: 1;
+  font-size: 4rem;
+  word-wrap: break-word; /* 文字がはみ出ないようにラップ */
+}
+
+/* 右側コンテンツの設定 */
+.OurBusiness-right-content {
+  width: 75%;
+  overflow-y: hidden;
+  padding: 20px;
+  color: #ffffff;
+  margin-left: auto; /* 右寄せ */
+}
+
+/* 各セクションの設定 */
+.OurBusiness_viewpoint {
+  margin-bottom: 100px;
+}
+
+.OurBusiness_header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.OurBusiness_first .OurBusiness_header-container {
+  border-bottom: none; /* 最初のセクションにはボーダーを入れない */
+}
+
+.OurBusiness_technology .OurBusiness_header-container {
+  border-bottom: 1px solid #fff; /* 2番目以降のセクションにボーダーを設定 */
+}
+
+.OurBusiness_viewpoint-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* 各セクションの見出しと詳細の設定 */
+.OurBusiness_viewpoint h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.OurBusiness_viewpoint p {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* コンテンツの内部レイアウト */
+.OurBusiness-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.OurBusiness-description-details {
+  width: 70%;
+}
+
+/* カラーブロックのスタイル */
+.OurBusiness-color-block {
+  width: 150px;
+  height: 150px;
+  background-size: 200% 200%;
+  border-radius: 5px;
+  animation: colorShift 5s ease-in-out infinite;
+  transition: transform 0.5s;
+}
+
+/* 各カラーオブジェクトのスタイル */
+.color-block-1 {
+  background: linear-gradient(45deg, #ff7b7b, #ffe07b);
+}
+
+.color-block-2 {
+  background: linear-gradient(45deg, #7bdff2, #b2f7ef);
+}
+
+.color-block-3 {
+  background: linear-gradient(45deg, #ffd97b, #ffb07b);
+}
+
+.color-block-4 {
+  background: linear-gradient(45deg, #c1f7b2, #7bffa0);
+}
+
+.color-block-5 {
+  background: linear-gradient(45deg, #b77bff, #d1b2f7);
+}
+
+.color-block-6 {
+  background: linear-gradient(45deg, #7b83ff, #7bafff);
+}
+
+/* 色の変化アニメーション */
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* カラーブロックにホバー時の拡大効果 */
+.OurBusiness-color-block:hover {
+  transform: scale(1.1);
+}
+
+/* モバイル用レスポンシブ対応 */
+@media (max-width: 768px) {
+  .OurBusiness-container {
+    flex-direction: column; /* 縦並び */
+    width: 100%;
+    margin: 0;
+  }
+
+  .OurBusiness-left-title {
+    position: static; /* モバイル時は固定表示を無効化 */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .OurBusiness-left-title h1 {
+    font-size: 3rem; /* モバイル時のフォントサイズ調整 */
+    word-wrap: break-word; /* ラップ */
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .OurBusiness-right-content {
+    width: 90%; /* モバイル時の幅 */
+    overflow-y: visible;
+    margin-left: 0;
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+
+  .OurBusiness-content-container {
+    flex-direction: column; /* 縦並び */
+    align-items: flex-start;
+  }
+
+  .OurBusiness-description-details {
+    width: 100%; /* 全幅で表示 */
+  }
+
+  .OurBusiness-color-block {
+    width: 100%; /* モバイル時は全幅 */
+    height: 100px; /* 高さ調整 */
+    margin-top: 10px;
+  }
+}

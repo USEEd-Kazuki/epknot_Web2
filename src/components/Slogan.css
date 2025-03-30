@@ -1,0 +1,164 @@
+.UniqueID_what-we-do {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  margin-top: 200px;
+}
+
+.UniqueID_content-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+}
+
+.UniqueID_gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(193, 255, 176, 0.678) 30%, rgba(0, 0, 0, 0) 40%);
+  z-index: 1;
+}
+
+.UniqueID_heading-container {
+  display: flex;
+  align-items: center;
+}
+
+.UniqueID_anchor-icon {
+  width: 40px;
+  margin-right: 20px;
+}
+
+/* モバイル用の調整 */
+@media (max-width: 768px) {
+  .UniqueID_what-we-do{
+    margin-top:  0 !important;
+    padding-top:  4rem !important;
+  }
+  .UniqueID_anchor-icon {
+    width: 30px;
+    margin-right: 15px;
+  }
+
+  .UniqueID_heading-container {
+    margin-bottom: 20px; /* モバイルサイズでは余白を少なくする */
+  }
+}
+
+@media (max-width: 480px) {
+  .UniqueID_anchor-icon {
+    width: 25px;
+    margin-right: 10px;
+  }
+
+  .UniqueID_heading-container {
+    margin-bottom: 15px;
+  }
+}
+
+.UniqueID_heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.UniqueID_main-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.UniqueID_viewpoints {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.UniqueID_viewpoint {
+  width: 48%;
+  text-align: left;
+}
+
+.UniqueID_header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.UniqueID_viewpoint-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* モバイル用の調整 */
+@media (max-width: 768px) {
+  .UniqueID_what-we-do {
+    display: block;
+    text-align: left;
+    padding: 0;
+  }
+
+  .UniqueID_gradient-background {
+    position: relative;
+    height: 300px;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+  .UniqueID_content-container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .UniqueID_viewpoints {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .UniqueID_viewpoint {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .UniqueID_main-text {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .UniqueID_viewpoint h3 {
+    font-size: 18px;
+  }
+
+  .UniqueID_viewpoint p {
+    font-size: 14px;
+  }
+
+  .UniqueID_gradient-background {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+}

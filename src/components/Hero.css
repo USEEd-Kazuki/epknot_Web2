@@ -1,0 +1,66 @@
+/* 全体のHeroセクションのスタイル */
+.Hero-content {
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Heroセクションを画面全体の高さに設定 */
+  background: radial-gradient(circle, #008000, #800080, #a52a2a); /* 緑、紫、茶色の円形グラデーション */
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite; /* グラデーションアニメーション */
+  margin-bottom: 10rem;
+}
+
+/* Hero内のセクション */
+.hero {
+  background-color: transparent;
+  padding: 2rem;
+}
+
+/* h1のスタイル */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+  white-space: nowrap; /* 改行を防ぐ */
+}
+
+/* アニメーション適用のためにspanタグをブロック化 */
+h1 span {
+  display: inline-block; /* inline-blockにすることでアニメーション可能 */
+}
+
+/* pタグのスタイル */
+p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+/* 背景グラデーションのアニメーション */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .Hero-content {
+    margin-bottom: 4rem;
+  }
+  
+  .hero {
+    background-color: transparent;
+    padding: 0rem;
+  }
+  
+}

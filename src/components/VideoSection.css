@@ -1,0 +1,40 @@
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  margin: 0;
+  padding: 0;
+}
+
+.video-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-content {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* スマホ用レスポンシブ */
+@media (max-width: 768px) {
+  .video-section {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 !important;
+    padding-top: 4rem;
+  }
+
+  .video-content {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;}
+}

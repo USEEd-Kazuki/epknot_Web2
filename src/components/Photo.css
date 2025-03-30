@@ -1,0 +1,39 @@
+/* コンテナのスタイル */
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background-color: 111216; 
+  padding: 40px 0;
+  margin: 50px 0;
+}
+
+/* 写真行のスタイル */
+.photo-row {
+  display: flex;
+  white-space: nowrap;
+  width: auto;
+  justify-content: space-between;
+  margin-bottom: 30px; /* 行間を広くして視覚的に分ける */
+}
+
+.photo {
+  width: calc(100vw / 5); /* 少し小さめにしてスペースに余裕を持たせる */
+  height: auto;
+  margin-right: 15px;
+  border-radius: 10px; /* 写真の角を丸くする */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 軽いシャドウを追加 */
+}
+
+/* テキスト行のスタイル */
+.text-row {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 60px; /* テキストをより目立たせる */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #ffffff; /* 白色のテキストでコントラストを強調 */
+  letter-spacing: 0.15em; /* 文字間のスペースを調整 */
+  margin: 40px 0;
+}
