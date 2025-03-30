@@ -38,19 +38,51 @@
   margin-right: 20px;
 }
 
+.UniqueID_main-text {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.8;
+  letter-spacing: 0.05rem;
+  text-align: justify;
+}
+
+.UniqueID_viewpoints {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.UniqueID_viewpoint {
+  margin-bottom: 3rem;
+}
+
+.UniqueID_header-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.UniqueID_viewpoint-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c1ffb0;
+}
+
 /* モバイル用の調整 */
 @media (max-width: 768px) {
-  .UniqueID_what-we-do{
-    margin-top:  0 !important;
-    padding-top:  4rem !important;
+  .UniqueID_what-we-do {
+    margin-top: 0 !important;
+    padding-top: 4rem !important;
   }
+
   .UniqueID_anchor-icon {
     width: 30px;
     margin-right: 15px;
   }
 
   .UniqueID_heading-container {
-    margin-bottom: 20px; /* モバイルサイズでは余白を少なくする */
+    margin-bottom: 20px;
   }
 }
 
@@ -65,100 +97,12 @@
   }
 }
 
-.UniqueID_heading {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.UniqueID_main-text {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  margin-bottom: 4rem;
-  text-align: left;
-}
-
-.UniqueID_viewpoints {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  align-items: flex-start;
-  margin-top: 40px;
-}
-
-.UniqueID_viewpoint {
-  width: 48%;
-  text-align: left;
-}
-
-.UniqueID_header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.UniqueID_viewpoint-number {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-/* モバイル用の調整 */
-@media (max-width: 768px) {
-  .UniqueID_what-we-do {
-    display: block;
-    text-align: left;
-    padding: 0;
-  }
-
-  .UniqueID_gradient-background {
-    position: relative;
-    height: 300px;
-    z-index: 1;
-    margin-bottom: 20px;
-  }
-
-  .UniqueID_content-container {
-    position: relative;
-    z-index: 2;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .UniqueID_viewpoints {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .UniqueID_viewpoint {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 24px;
-  }
-
-  .UniqueID_main-text {
-    font-size: 18px;
-    margin-bottom: 1rem;
-  }
-
-  .UniqueID_viewpoint h3 {
-    font-size: 18px;
-  }
-
-  .UniqueID_viewpoint p {
-    font-size: 14px;
-  }
-
-  .UniqueID_gradient-background {
-    height: 250px;
-    margin-bottom: 20px;
-  }
+/* ✅ iOSなどでのパフォーマンス最適化 */
+.UniqueID_anchor-icon,
+.UniqueID_viewpoints,
+.UniqueID_viewpoint,
+.UniqueID_heading-container {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }

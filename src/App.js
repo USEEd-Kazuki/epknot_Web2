@@ -47,7 +47,9 @@ function App() {
       <div ref={sections.Slogan}><Slogan /></div>
       <div ref={sections.OurBusiness}><OurBusiness /></div>
       <div ref={sections.Member}><Member /></div>
+      {/* 
       <div ref={sections.Photo}><Photo /></div>
+      */}
       <div ref={sections.AboutCompaney}><AboutCompaney /></div>
       <div ref={sections.Map}><Map /></div>
       

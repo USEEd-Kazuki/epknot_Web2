@@ -5,3 +5,9 @@
     color: white;
   }
   
+
+  @media (max-width: 768px) {
+    .footer p {
+      font-size: 0.8rem; /* モバイル用 */
+    }
+  }
