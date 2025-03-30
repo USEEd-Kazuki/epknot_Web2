@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <main className="Hero-content">
       <section className="hero">
-        <h1 ref={h1Ref}>Welcome to EPknoT</h1>
+        <h1 ref={h1Ref} className='HeroP'>Welcome to EPknoT</h1>
         <p ref={pRef}>We value each and every work.</p>
       </section>
     </main>
