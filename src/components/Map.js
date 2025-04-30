@@ -13,9 +13,10 @@ const containerStyle = {
   overflow: "hidden",
 };
 
+// 〒107-0052 東京都港区赤坂2丁目11-2 NOIR赤坂ビルディングの緯度経度
 const center = {
-  lat: 35.669727,
-  lng: 139.758663,
+  lat: 35.671939,  // 緯度
+  lng: 139.737953, // 経度
 };
 
 const Map = () => {
@@ -25,7 +26,6 @@ const Map = () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (!isMobile && mapRef.current) {
-      // PCのみアニメーション
       gsap.fromTo(
         mapRef.current,
         { opacity: 0, scale: 0.8 },
@@ -42,7 +42,6 @@ const Map = () => {
         }
       );
     } else if (mapRef.current) {
-      // モバイル：CSS無視して即時表示
       mapRef.current.style.opacity = "1";
       mapRef.current.style.transform = "scale(1)";
     }
@@ -68,4 +67,3 @@ const Map = () => {
 };
 
 export default Map;
-

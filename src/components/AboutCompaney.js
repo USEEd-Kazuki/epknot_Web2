@@ -69,7 +69,7 @@ const AboutCompaney = () => {
             <li><strong>社名:</strong> 株式会社EPknoT (EPknoT Co., Ltd.)</li>
             <li><strong>設立:</strong> 2020年 11月 18日</li>
             <li><strong>取締役代表:</strong> 山本 尚季 (Yamamoto Naoki)</li>
-            <li><strong>住所:</strong> 〒 104-0061 東京都中央区銀座7-3-7 ブランエスパ 6F</li>
+            <li><strong>住所:</strong> 〒 107-0052 東京都港区赤坂 2-11-2 NOIR赤坂ビルディング 9F</li>
             <li><strong>主要事業:</strong> 船舶売買に関する仲介業及び、これに関するコンサルティング、リサーチ業</li>
           </ul>
         </div>
