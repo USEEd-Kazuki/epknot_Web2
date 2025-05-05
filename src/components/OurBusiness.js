@@ -14,7 +14,7 @@ const OurBusiness = () => {
       number: '01',
       title: 'SOURCING',
       description: '最高の１件を、お客様とご一緒に組成します。',
-      details: '新造船・中古船におけるセールアンドリースバック等の案件打診を海外から受けます。 海外との幅広いネットワークにより、様々な情報・案件を提供することが出来ます。'
+      details: '海外の様々なネットワークを通じ、S&P、TC/BBC project、Sales and Lease Back等の案件打診を受けます。今のニーズに合わせてストラクチャーや主要条件の大枠を調整していきます'
     },
     {
       number: '02',
@@ -38,7 +38,7 @@ const OurBusiness = () => {
       number: '05',
       title: 'PROJECT MANAGEMENT',
       description: '関係各所と柔軟に連携を行い、円滑な案件管理を行います。',
-      details: '融資承認後、クロージングまでに必要となる作業（登記手続き・セキュリティドキュメント作成）において倉庫会社・海事弁護士と連携して円滑にクロージングまで進めて行きます。当事者と連携して案件の全体管理を行うことで、弊社でも進捗状況を把握し、クロージング期日に間に合うように調整して案件管理を行っております。'
+      details: '融資承認後、クロージングまでに必要となる手続き（所有権・抵当権の設定、セキュリティドキュメント作成など）において、登記手続きは弊社が一括して代理業務を行い、融資・担保契約は海事弁護士と連携して円滑にクロージングまで進めて行きます。弊社が当事者と連携して案件全体の管理を行うことで、スケジュールに遅延なくスムーズにクロージングを迎えるように努めております。'
     },
     {
       number: '06',
@@ -63,7 +63,7 @@ const OurBusiness = () => {
             <div className="OurBusiness-content-container">
               <div className="OurBusiness-description-details">
                 <h3>{content.description}</h3>
-                <p>{content.Details || content.details}</p>
+                <p >{content.Details || content.details}</p>
               </div>
               {index !== 0 && <div className={`OurBusiness-color-block color-block-${index}`}></div>}
             </div>

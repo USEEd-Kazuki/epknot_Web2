@@ -6,10 +6,6 @@
   color: #ffffff;
 }
 
-.company-description{
-  padding-top: 5rem;
-}
-
 
 .company-info h1 {
   font-size: 2.5rem;
@@ -17,14 +13,14 @@
 }
 
 .company-info h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-bottom: 25px;
   border-bottom: 2px solid #ffffff;
   padding-bottom: 10px;
 }
 
 .company-info p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -48,12 +44,10 @@
 
 .greig {
   flex-shrink: 0;
-}
-
-.greig img {
-  width: 150px;
+  width: 600px;
   height: auto;
 }
+
 
 .alinece_content p {
   flex: 1;

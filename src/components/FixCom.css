@@ -1,0 +1,51 @@
+/* セクション全体：背景グラデーション + 横スクロール防止 */
+.FixCompaney {
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  background: linear-gradient(to bottom, #111216 70%, #ffffff 100%);
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* 中央寄せの内部コンテナ */
+.fixComSection {
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.fixComSection h1{
+  border-bottom: 2px solid #ffffff;
+}
+
+/* テキスト段落スタイル */
+.FixCompaney-message p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* モバイル対応：必要に応じてここで調整可能 */
+@media (max-width: 480px) {
+  .FixCompaney {
+    padding-top: 0rem;
+    padding-bottom:  0rem;
+    background: linear-gradient(to bottom, #111216 80%, #ffffff 100%);
+  }
+
+  .FixCompaney-message p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+}
+
+/* 念のためのグローバルはみ出し防止 */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

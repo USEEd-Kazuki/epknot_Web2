@@ -51,7 +51,7 @@ const Member = () => {
 
   return (
     <div className="member-section" ref={sectionRef}>
-      <h1 ref={h1Ref} className="team-title">Team</h1>
+      <h1 ref={h1Ref} className="team-title">TEAM</h1>
       <p ref={pRef}className="team-description">
       EPknoTでは、多種多様なバックグランドを持ち、豊富な船舶、ファイナンス知識を有したプロフェッショナルメンバーが活躍しています。
       </p>

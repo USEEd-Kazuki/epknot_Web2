@@ -7,6 +7,7 @@ const AboutCompaney = () => {
     return (
       <section className="company-info">
         <h1>COMPANY</h1>
+        {/* 
         <div className="company-info-message">
           <h2>Our Message</h2>
           <p>
@@ -21,6 +22,8 @@ const AboutCompaney = () => {
             船舶融資におけるファイナンスアレンジメントなど、様々なサービスを提供するブローカーハウスです。
           </p>
         </div>
+        
+        */}
 
         <div className="company-description">
           <h2>PARTNERS</h2>
@@ -64,7 +67,7 @@ const AboutCompaney = () => {
 */}
 
         <div className="company-details">
-          <h2>Company Information</h2>
+          <h2>COMPANY INFORMATION</h2>
           <ul>
             <li><strong>社名:</strong> 株式会社EPknoT (EPknoT Co., Ltd.)</li>
             <li><strong>設立:</strong> 2020年 11月 18日</li>

@@ -21,7 +21,12 @@
 .OurBusiness-left-title h1 {
   line-height: 1;
   font-size: 4rem;
-  word-wrap: break-word; /* 文字がはみ出ないようにラップ */
+  word-wrap: break-word; 
+  /* 文字がはみ出ないようにラップ */
+}
+
+.OurBusiness-details-text{
+  font-size: 10rem;
 }
 
 /* 右側コンテンツの設定 */
@@ -179,5 +184,9 @@
     width: 100%; /* モバイル時は全幅 */
     height: 100px; /* 高さ調整 */
     margin-top: 10px;
+  }
+
+  .OurBusiness_viewpoint p {
+    font-size: 0.8rem;
   }
 }

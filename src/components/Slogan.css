@@ -9,7 +9,6 @@
   text-align: center;
   color: #fff;
   overflow: hidden;
-  margin-top: 200px;
 }
 
 .UniqueID_content-container {
@@ -39,12 +38,16 @@
 }
 
 .UniqueID_main-text {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.8;
   letter-spacing: 0.05rem;
   text-align: justify;
+}
+
+.SloganText_p{
+  font-size: 1rem;
 }
 
 .UniqueID_viewpoints {
@@ -94,6 +97,10 @@
 
   .UniqueID_heading-container {
     margin-bottom: 15px;
+  }
+
+  .SloganText_p{
+    font-size: 0.8rem;
   }
 }
 

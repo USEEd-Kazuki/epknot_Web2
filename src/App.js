@@ -8,6 +8,8 @@ import VideoSection from './components/VideoSection';
 import Slogan from './components/Slogan';
 import OurBusiness from './components/OurBusiness';
 import Member from './components/Member';
+import WhoCompaney from './components/WhoCompaney'
+import Fix from './components/FixCom'
 import Photo from './components/Photo';
 import AboutCompaney from './components/AboutCompaney';
 import Map from './components/Map';
@@ -44,8 +46,10 @@ function App() {
       <div ref={sections.Home}><Hero /></div>
       <div ref={sections.MainMessage}><MainMessage /></div>
       <div ref={sections.VideoSection}><VideoSection /></div>
+      <div ref={sections.WhoCompaney}><WhoCompaney /></div>
       <div ref={sections.Slogan}><Slogan /></div>
       <div ref={sections.OurBusiness}><OurBusiness /></div>
+      <div ref={sections.Fix}><Fix /></div>
       <div ref={sections.Member}><Member /></div>
       {/* 
       <div ref={sections.Photo}><Photo /></div>
