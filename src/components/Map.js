@@ -16,8 +16,8 @@ const containerStyle = {
 
 // 〒107-0052 東京都港区赤坂2丁目11-2 NOIR赤坂ビルディングの緯度経度
 const center = {
-  lat: 35.671939,
-  lng: 139.737953,
+  lat: 35.6702001,
+  lng: 139.7412232,
 };
 
 const Map = () => {
