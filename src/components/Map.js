@@ -6,6 +6,7 @@ import "./Map.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// マップコンテナのスタイル
 const containerStyle = {
   width: "100%",
   height: "800px",
@@ -15,8 +16,8 @@ const containerStyle = {
 
 // 〒107-0052 東京都港区赤坂2丁目11-2 NOIR赤坂ビルディングの緯度経度
 const center = {
-  lat: 35.671939,  // 緯度
-  lng: 139.737953, // 経度
+  lat: 35.671939,
+  lng: 139.737953,
 };
 
 const Map = () => {
@@ -49,6 +50,13 @@ const Map = () => {
     ScrollTrigger.refresh();
   }, []);
 
+  // マーカーをクリックしたらGoogleマップで開く
+  const handleMarkerClick = () => {
+    const mapUrl =
+      "https://www.google.com/maps/search/?api=1&query=35.671939,139.737953";
+    window.open(mapUrl, "_blank");
+  };
+
   return (
     <section className="map-section">
       <div className="map-block" ref={mapRef}>
@@ -58,7 +66,7 @@ const Map = () => {
             center={center}
             zoom={16}
           >
-            <Marker position={center} />
+            <Marker position={center} onClick={handleMarkerClick} />
           </GoogleMap>
         </LoadScript>
       </div>
