@@ -6,7 +6,7 @@ import "./Map.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// マップコンテナのスタイル
+// マップの表示スタイル
 const containerStyle = {
   width: "100%",
   height: "800px",
@@ -14,7 +14,7 @@ const containerStyle = {
   overflow: "hidden",
 };
 
-// 〒107-0052 東京都港区赤坂2丁目11-2 NOIR赤坂ビルディングの緯度経度
+// NOIR赤坂ビルディング（〒107-0052 東京都港区赤坂2-11-2）の近辺座標
 const center = {
   lat: 35.6702001,
   lng: 139.7412232,
@@ -50,10 +50,10 @@ const Map = () => {
     ScrollTrigger.refresh();
   }, []);
 
-  // マーカーをクリックしたらGoogleマップで開く
+  // マーカークリック時に住所でGoogle Mapsアプリ or ブラウザを開く
   const handleMarkerClick = () => {
-    const mapUrl =
-      "https://www.google.com/maps/search/?api=1&query=35.671939,139.737953";
+    const address = encodeURIComponent("〒107-0052 東京都港区赤坂2-11-2 NOIR赤坂ビルディング");
+    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${address}`;
     window.open(mapUrl, "_blank");
   };
 
