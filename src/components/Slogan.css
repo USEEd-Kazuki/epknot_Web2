@@ -94,6 +94,9 @@
     width: 25px;
     margin-right: 10px;
   }
+  .UniqueID_heading{
+    font-size:  2rem;
+  }
 
   .UniqueID_heading-container {
     margin-bottom: 15px;

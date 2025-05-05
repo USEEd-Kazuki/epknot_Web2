@@ -37,6 +37,11 @@
     background: linear-gradient(to bottom, #111216 80%, #ffffff 100%);
   }
 
+  .FixCompaney h1{
+    font-size:  2rem;
+  }
+
+
   .FixCompaney-message p {
     font-size: 0.8rem;
     line-height: 1.8;

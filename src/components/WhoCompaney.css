@@ -48,6 +48,11 @@
     .WhoCompaney{
         padding-top: 6rem;
     }
+    
+    .WhoCompaney h1{
+      padding-top: 2rem;
+  }
+  
 
     .WhoCompaney-message p{
       font-size: 0.8rem;
