@@ -48,13 +48,7 @@ const Section = () => {
 
       <div className="UniqueID_content-container">
         <div className="UniqueID_heading-container">
-          <img
-            src={anchor}
-            alt="Anchor"
-            className="UniqueID_anchor-icon"
-            ref={anchorIconRef}
-          />
-          <h1 className="UniqueID_heading">What we do</h1>
+          <h1 className="UniqueID_heading">WAHT WE DO</h1>
         </div>
 
         <p className="UniqueID_main-text">

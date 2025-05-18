@@ -23,23 +23,45 @@ html, body {
   transition: all 0.3s ease;
 }
 
-.logo {
-  font-size: 1.5rem;
-  z-index: 1100;
-}
-
+/* ====== Logo ====== */
 .logo img {
   width: 50px;
   height: auto;
+   z-index: 1001;
+}
+.logo {
+  flex-shrink: 0;
+  margin-right: 1rem;
 }
 
-.company-name {
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-align: center;
+/* ====== デスクトップ用メニュー ====== */
+.desktop-menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
   flex: 1;
 }
 
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-button:hover {
+  color: #00ff88;
+}
+
+/* ====== ハンバーガー ====== */
 .menu-toggle-button {
   width: 40px;
   height: 30px;
@@ -47,11 +69,11 @@ html, body {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   z-index: 1100;
+  display: none;
 }
 
 .menu-toggle-button .line {
@@ -76,20 +98,21 @@ html, body {
   transform-origin: center;
 }
 
+/* ====== スマホ用メニュー ====== */
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
   opacity: 0;
-  border-radius: 8px;
   visibility: hidden;
+  flex-direction: column;
 }
 
 .menu.open {
@@ -97,25 +120,11 @@ html, body {
   opacity: 1;
 }
 
-.menu-items {
-  display: flex;
-  gap: 1rem;
+.mobile-menu {
+  display: none;
 }
 
-.menu-button {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.menu-button:hover {
-  color: #008000;
-}
-
-/* スマホ用レスポンシブ */
+/* ====== レスポンシブ: スマホ用レイアウト ====== */
 @media (max-width: 768px) {
   .header {
     top: 0 !important;
@@ -126,36 +135,21 @@ html, body {
     padding: 0.5rem 0.5rem;
   }
 
-  .logo {
-    font-size: 1.2rem;
-  }
-
   .logo img {
     width: 36px;
   }
 
-  .company-name {
-    font-size: 0.9rem;
-    text-align: center;
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
   }
 
   .menu-toggle-button {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-  }
-
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
+    display: flex;
+        left: -15px;
   }
 
   .menu-items {

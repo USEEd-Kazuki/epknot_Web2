@@ -6,12 +6,16 @@
     width: 90%;
     margin: 0 auto;
     background-color: #111216;
-    font-family: 'Roboto', sans-serif;
     color: #ffffff;
   }
 
   .WhoCompaney-message p{
-    font-size: 1rem;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 1rem; /* 約16px */
+  color: #ffffff;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   }
   
   

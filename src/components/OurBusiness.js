@@ -43,7 +43,7 @@ const OurBusiness = () => {
     {
       number: '06',
       title: 'POST MANAGEMENT',
-      description: '一隻一隻、丁寧に管理をし、お客様のご要望へお応えします。',
+      description: '一隻一隻、丁寧に管理をし、お客様のご要望にお応えします。',
       details: '傭船者の与信管理や、傭船料の請求書作成、保険期日管理等を行っております。主担副担にて管理表作成のもと管理を行っております。'
     }
   ];
@@ -51,7 +51,7 @@ const OurBusiness = () => {
   return (
     <section className="OurBusiness-container">
       <div className="OurBusiness-left-title" ref={titleRef}>
-        <h1>Our <br /> Business</h1>
+        <h1>OUR <br /> BUSINESS</h1>
       </div>
       <div className="OurBusiness-right-content" ref={contentRef}>
         {contents.map((content, index) => (

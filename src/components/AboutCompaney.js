@@ -33,8 +33,8 @@ const AboutCompaney = () => {
             </div>
             <div className='aliance_subcontent'>
             <p>
-            この度、弊社はヨーロッパにおける事業拡大を目的として、ノルウェーにて Grieg Shipbrokers KS社と共同で合弁会社「Grieg EPknoT Co., Ltd」を設立致しました。<br />
-             今後、海運市場の動向や世界情勢に対応した情報提供、及び案件ソーシングを通じて サービスの更なる向上を目指してまいります。
+            弊社はヨーロッパにおける事業拡大を目的として、ノルウェーのGrieg Shipbrokers KS社と共同で、合弁会社「Grieg EPknoT Co., Ltd」を設立いたしました。<br />
+             今後は、海運市場の動向や世界情勢に対応した情報提供と案件ソーシングを通じて、サービスの更なる向上を目指してまいります。
             </p>
             </div>
           </div>
@@ -73,7 +73,7 @@ const AboutCompaney = () => {
             <li><strong>設立:</strong> 2020年 11月 18日</li>
             <li><strong>取締役代表:</strong> 山本 尚季 (Yamamoto Naoki)</li>
             <li><strong>住所:</strong> 〒 107-0052 東京都港区赤坂 2-11-2 NOIR赤坂ビルディング 9F</li>
-            <li><strong>主要事業:</strong> 船舶売買に関する仲介業及び、これに関するコンサルティング、リサーチ業</li>
+            <li><strong>主要事業:</strong> 船舶売買に関する仲介業務および、それに付随するコンサルティング業務、リサーチ業務</li>
           </ul>
         </div>
       </section>

@@ -10,7 +10,6 @@ const Header = ({ scrollToSection }) => {
         const menu = menuRef.current;
 
         if (isMenuOpen) {
-            // メニューを右にスライドして非表示にする
             gsap.to(menu, {
                 x: '100%',
                 opacity: 0,
@@ -21,7 +20,6 @@ const Header = ({ scrollToSection }) => {
                 }
             });
         } else {
-            // メニューを右からスライドして表示する
             gsap.set(menu, { x: '100%', opacity: 0 });
             gsap.to(menu, {
                 x: 0,
@@ -32,18 +30,32 @@ const Header = ({ scrollToSection }) => {
             menu.classList.add('open');
         }
 
-        // メニューの開閉状態をトグル
         setIsMenuOpen(!isMenuOpen);
     };
 
     const handleMenuItemClick = (section) => {
         scrollToSection(section);
-        handleMenuToggle(); // メニューを閉じる
+        if (window.innerWidth <= 768) {
+            handleMenuToggle();
+        }
     };
 
     return (
         <header className="header">
-            <div className="menu" ref={menuRef}>
+            <div className="logo">
+                <img src="./Images/logo.svg" alt="Logo" className="logosvg" />
+            </div>
+
+            {/* デスクトップ用メニュー */}
+            <div className="menu-items desktop-menu">
+                <button className="menu-button" onClick={() => handleMenuItemClick('Home')}>HOME</button>
+                <button className="menu-button" onClick={() => handleMenuItemClick('OurBusiness')}>SERVICE</button>
+                <button className="menu-button" onClick={() => handleMenuItemClick('Member')}>TEAM</button>
+                <button className="menu-button" onClick={() => handleMenuItemClick('AboutCompaney')}>COMPANY</button>
+            </div>
+
+            {/* モバイル用メニュー */}
+            <div className="menu mobile-menu" ref={menuRef}>
                 <div className="menu-items">
                     <button className="menu-button" onClick={() => handleMenuItemClick('Home')}>HOME</button>
                     <button className="menu-button" onClick={() => handleMenuItemClick('OurBusiness')}>SERVICE</button>
@@ -51,11 +63,9 @@ const Header = ({ scrollToSection }) => {
                     <button className="menu-button" onClick={() => handleMenuItemClick('AboutCompaney')}>COMPANY</button>
                 </div>
             </div>
-            <div className="logo">
-                <img src="./Images/logo.svg" alt="svg" className="logosvg" />
-            </div>
-            <div className="company-name">EPknoT Co., Ltd.</div>
-            <button className={`menu-toggle-button ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
+
+            {/* モバイル用トグルボタン */}
+            <button className={`menu-toggle-button mobile-menu ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
                 <div className="line top"></div>
                 <div className="line middle"></div>
                 <div className="line bottom"></div>

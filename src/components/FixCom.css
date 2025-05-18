@@ -3,7 +3,6 @@
   padding-top: 6rem;
   padding-bottom: 10rem;
   background: linear-gradient(to bottom, #111216 70%, #ffffff 100%);
-  font-family: 'Roboto', sans-serif;
   color: #ffffff;
   overflow-x: hidden;
   width: 100%;
@@ -24,9 +23,12 @@
 
 /* テキスト段落スタイル */
 .FixCompaney-message p {
-  font-size: 1rem;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 1rem; /* 約16px */
+  color: #ffffff;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 /* モバイル対応：必要に応じてここで調整可能 */
