@@ -60,7 +60,7 @@ const Map = () => {
   return (
     <section className="map-section">
       <div className="map-block" ref={mapRef}>
-        <LoadScript googleMapsApiKey="AIzaSyB2d4Yy8x23w6yIuicmTxYakTaKJmBnuEI">
+        <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
