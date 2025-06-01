@@ -65,7 +65,7 @@ const OurBusiness = () => {
                 <h3>{content.description}</h3>
                 <p >{content.Details || content.details}</p>
               </div>
-              {index !== 0 && <div className={`OurBusiness-color-block color-block-${index}`}></div>}
+              {/*{index !== 0 && <div className={`OurBusiness-color-block color-block-${index}`}></div>}*/}
             </div>
           </div>
         ))}
